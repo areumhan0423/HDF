@@ -1,0 +1,107 @@
+.filter-container {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    background: white;
+    padding: 10px;
+    border-radius: 5px;
+}
+.flowchart-container {
+    display: flex;
+    overflow-x: auto;
+    background-color: white;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: white;
+    overflow-x: hidden;
+}
+
+/* Flowchart container */
+.flowchart {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 50px;
+    padding: 20px;
+    width: 100%;
+    overflow-x: auto; /* Allows horizontal scroll */
+    white-space: nowrap; /* Prevent wrapping */
+}
+
+/* Each Team container */
+.team-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    width: auto;
+}
+
+/* Team Title */
+.team-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Row for each step in the flowchart */
+.row {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    position: relative;
+}
+
+/* Node styling */
+.node {
+    background: white;
+    padding: 15px 20px;
+    min-width: 150px;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+    flex-shrink: 0; /* Prevent shrinking */
+    position: relative;
+}
+
+/* Decision node */
+.decision {
+    background: #ff7675;
+    border: 2px solid #d63031;
+}
+
+/* Hover Effects */
+.node:hover {
+    background: #e84393;
+    color: white;
+    transform: scale(1.1);
+}
+
+/* Create arrows between nodes */
+.node::after {
+    content: "→"; /* Unicode arrow symbol */
+    font-size: 20px;
+    color: black;
+    position: absolute;
+    right: -30px; /* Position the arrow to the right of the node */
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Remove the last arrow in each row (since it points nowhere) */
+.row .node:last-child::after {
+    content: "";
+}
+
+/* Optional styling for start node */
+.start {
+    background-color: #81ecec;
+}

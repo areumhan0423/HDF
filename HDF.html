@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Housing Data Flow</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Dropdown Filter -->
+    <div class="filter-container">
+        <label for="TeamFilter">Filter by Team:</label>
+        <select id="TeamFilter">
+            <option value="all">All</option>
+            <option value="sp/lp">Strategic/Local Planning</option>
+            <option value="divisional-support">Divisional Support</option>
+            <option value="development-management">Development Management</option>
+            <option value="environ-waste">Environment/Waste</option>
+            <option value="building-control">Building Control</option>
+            <option value="snn">Street Naming and Numbering</option>
+            <option value="lpg">Land and Property Gazetter</option>
+            <option value="council-tax">Council Tax</option>
+            <option value="infra">Infrastructure</option>
+            <option value="capital-delivery">Capital Delivery</option>
+            <option value="housing-supply">Housing Supply</option>
+        </select>
+    </div>
+    
+    <!-- Flowchart Container -->
+    <div class="flowchart">        
+        <!-- SP/LP Team -->
+        <div class="team-container strategic-planning">
+            <div class="team-title">Strategic/Local Planning</div>
+
+            <div class="row">
+                <div class="node start">Plan Making</div>
+                <div class="node">London Plan</div>
+                <div class="node">NPPF</div>
+            </div>
+            <div class="row">
+                <div class="node">Internal Consultation</div>
+                <div class="node">External Consultation</div>
+            </div>
+        </div>
+
+            <div class="row">
+                <div class="node">Internal Data Collection</div>
+                <div class="node">Survey the Demands</div>
+                <div class="node">Call For Site Exercise</div>
+                <div class="node">Site Allocation Exercise</div>
+            </div>
+
+            <div class="row">
+                <div class="node decision">First Iteration (Draft)</div>
+                <div class="node">Draft Release</div>
+                <div class="node">Community Feedback</div>
+            </div>
+            <div class="row">
+                <div class="node decision">2nd Iteration (Draft for Submission)</div>
+                <div class="node">Planning Inspectorate</div>
+                <div class="node">Examination</div>
+                <div class="node decision">Approved / Disapproved</div>
+            </div>
+            <div class="row">
+                <div class="node">Council</div>
+                <div class="node">Signs Off</div>
+                <div class="node">Local Plan Adopted</div>
+                <div class="node">Published on LBTH Website</div>
+            </div>
+        </div>
+
+        <!-- Other Teams or Process Sections can follow here -->
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
