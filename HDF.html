@@ -8,6 +8,29 @@
 </head>
 <body>
 
+    <h2>Login with Mural</h2>
+    <button onclick="redirectToMural()">Login</button>
+
+    <script>
+        const CLIENT_ID = "7a25ce4c-2a02-4022-a724-ba1da496e799";  // Replace with your Mural Client ID
+        const REDIRECT_URI = "https://areumhan0423.github.io/HDF/"; // Should match what you registered
+
+        function redirectToMural() {
+            const authUrl = `https://app.mural.co/api/public/v1/authorization/oauth2/?` +
+                `client_id=${7a25ce4c-2a02-4022-a724-ba1da496e799}&` +
+                `redirect_uri=${encodeURIComponent(https://areumhan0423.github.io/HDF/)}&` +
+                `scope=room:read,room:write&` +  
+                `state=xyz123&` +  
+                `response_type=code`;
+
+            window.location.href = authUrl;  // Redirect user to Mural authorization page
+        }
+    </script>
+
+</body>
+
+<body>
+
     <!-- Dropdown Filter -->
     <div class="filter-container">
         <label for="TeamFilter">Filter by Team:</label>
