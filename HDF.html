@@ -1,102 +1,21 @@
 <!DOCTYPE html>
+<script src="./oauth-express-server.js"></script>
+
 <html lang="en">
+    <a href="https://app.mural.co/api/public/v1/authorization/oauth2/?client_id=your_client_id&redirect_uri=your_callback_url&scope=your_scope&state=random_state_string&response_type=code">
+        Login with Mural
+    </a>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Housing Data Flow Diagram</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-
-    <h2>Login with Mural</h2>
-    <button onclick="redirectToMural()">Login</button>
-
-    <script>
-        const CLIENT_ID = "7a25ce4c-2a02-4022-a724-ba1da496e799";  // Replace with your Mural Client ID
-        const REDIRECT_URI = "https://areumhan0423.github.io/HDF/"; // Should match what you registered
-
-        function redirectToMural() {
-            const authUrl = `https://app.mural.co/api/public/v1/authorization/oauth2/?` +
-                `client_id=${7a25ce4c-2a02-4022-a724-ba1da496e799}&` +
-                `redirect_uri=${encodeURIComponent(https://areumhan0423.github.io/HDF/)}&` +
-                `scope=room:read,room:write&` +  
-                `state=xyz123&` +  
-                `response_type=code`;
-
-            window.location.href = authUrl;  // Redirect user to Mural authorization page
-        }
-    </script>
 
 </body>
 
 <body>
-
-    <!-- Dropdown Filter -->
-    <div class="filter-container">
-        <label for="TeamFilter">Filter by Team:</label>
-        <select id="TeamFilter">
-            <option value="all">All</option>
-            <option value="sp/lp">Strategic/Local Planning</option>
-            <option value="divisional-support">Divisional Support</option>
-            <option value="development-management">Development Management</option>
-            <option value="environ-waste">Environment/Waste</option>
-            <option value="building-control">Building Control</option>
-            <option value="snn">Street Naming and Numbering</option>
-            <option value="lpg">Land and Property Gazetter</option>
-            <option value="council-tax">Council Tax</option>
-            <option value="infra">Infrastructure</option>
-            <option value="capital-delivery">Capital Delivery</option>
-            <option value="housing-supply">Housing Supply</option>
-        </select>
-    </div>
-    
-    <!-- Flowchart Container -->
-    <div class="flowchart">        
-        <!-- SP/LP Team -->
-        <div class="team-container strategic-planning">
-            <div class="team-title">Strategic/Local Planning</div>
-
-            <div class="row">
-                <div class="node start">Plan Making</div>
-                <div class="node">London Plan</div>
-                <div class="node">NPPF</div>
-            </div>
-            <div class="row">
-                <div class="node">Internal Consultation</div>
-                <div class="node">External Consultation</div>
-            </div>
-        </div>
-
-            <div class="row">
-                <div class="node">Internal Data Collection</div>
-                <div class="node">Survey the Demands</div>
-                <div class="node">Call For Site Exercise</div>
-                <div class="node">Site Allocation Exercise</div>
-            </div>
-
-            <div class="row">
-                <div class="node decision">First Iteration (Draft)</div>
-                <div class="node">Draft Release</div>
-                <div class="node">Community Feedback</div>
-            </div>
-            <div class="row">
-                <div class="node decision">2nd Iteration (Draft for Submission)</div>
-                <div class="node">Planning Inspectorate</div>
-                <div class="node">Examination</div>
-                <div class="node decision">Approved / Disapproved</div>
-            </div>
-            <div class="row">
-                <div class="node">Council</div>
-                <div class="node">Signs Off</div>
-                <div class="node">Local Plan Adopted</div>
-                <div class="node">Published on LBTH Website</div>
-            </div>
-        </div>
-
-        <!-- Other Teams or Process Sections can follow here -->
-
-    </div>
-
+    <iframe src='https://app.mural.co/embed/a4e3d1a4-7103-4699-94ca-e39323ff950e' width='100%' height='480px'  sandbox='allow-same-origin allow-scripts allow-modals allow-popups allow-popups-to-escape-sandbox'></iframe>
     <script src="script.js"></script>
 </body>
 </html>
